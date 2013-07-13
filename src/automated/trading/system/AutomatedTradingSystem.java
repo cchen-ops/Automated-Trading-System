@@ -4,6 +4,7 @@
  */
 package automated.trading.system;
 
+import Data.Validation.QuoteData;
 import java.io.*;
 import java.util.*;
 /**
