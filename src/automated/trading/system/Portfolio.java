@@ -19,39 +19,39 @@ public class Portfolio {
  
   // this method gets the market value for each stock, sums it up and returns the total value of the portfolio.
   
- public Double getTotalValue() {
-  Double value = 0.0;
-  for (Asset stock : this.stocks) {
-   value += (market.getPrice(stock.getName()) * stock.getQuantity());
-  }
-  return value;
- }
+    public Double getTotalValue() {
+     Double value = 0.0;
+     for (Asset stock : this.stocks) {
+      value += (market.getPrice(stock.getName()) * stock.getQuantity());
+     }
+     return value;
+    }
 
- public String getName() {
-  return name;
- }
+    public String getName() {
+     return name;
+    }
 
- public void setName(String name) {
-  this.name = name;
- }
+    public void setName(String name) {
+     this.name = name;
+    }
 
- public List<Asset> getStocks() {
-  return stocks;
- }
+    public List<Asset> getStocks() {
+     return stocks;
+    }
 
- public void setStocks(List<Asset> stocks) {
-  this.stocks = stocks;
- }
+    public void setStocks(List<Asset> stocks) {
+     this.stocks = stocks;
+    }
 
- public void addStock(Asset stock) {
-  stocks.add(stock);
- }
+    public void addStock(Asset stock) {
+     stocks.add(stock);
+    }
 
- public Market getStockMarket() {
-  return market;
- }
+    public Market getStockMarket() {
+     return market;
+    }
 
- public void setStockMarket(Market market) {
-  this.market = market;
- }
+    public void setStockMarket(Market market) {
+     this.market = market;
+    }
 }

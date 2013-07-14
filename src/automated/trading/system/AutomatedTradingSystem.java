@@ -13,14 +13,28 @@ import java.util.*;
  */
 public class AutomatedTradingSystem {
     static String priceDataFile = "C:/Users/Christopher/Documents/NetBeansProjects/Automated Trading System/USDJPY_Candlestick_1_D_BID.csv";
+    static int shortWindow = 50;
+    static int longWindow = 200;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-//        System.out.println("Working Directory = " + System.getProperty("user.dir"));
         
+        //Load Data
         List<QuoteData> priceData = QuoteData.loadData(priceDataFile);   
-        System.out.println(priceData.get(25).getClosePrice());
+        //System.out.println(priceData.get(1500).getClosePrice());
+        
+        //Moving Average Calculation
+        SMA_EMA.EMA(longWindow, priceData);
+        
+        //Backtest
+        
+        Asset Position = new Asset("stock1", 0);
+        
+        for (int i = longWindow; i<priceData.size(); i++){
+            
+        }
+        
 
     }
          
