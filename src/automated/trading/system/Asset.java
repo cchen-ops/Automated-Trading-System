@@ -10,11 +10,15 @@ package automated.trading.system;
  */
 public class Asset {
     private String name;
-    private int quantity;
+    private int shares;
+    private double purPrice;
+    private double currPrice;
     
-    public Asset(String name, int quantity){
+    public Asset(String name, int shares, double purPrice, double currPrice){
         this.name = name;
-        this.quantity = quantity;
+        this.shares = shares;
+        this.purPrice = purPrice;
+        this.currPrice = currPrice;
     }
     
     public String getName(){
@@ -25,12 +29,39 @@ public class Asset {
         this.name = name;
     }
     
-    public int getQuantity(){
-        return quantity;
+    public int getShares(){
+        return shares;
     }
     
-    public void setQuantity(){
-        this.quantity = quantity;
+    public void setShares(int shares){
+        this.shares = shares;
+    }
+    
+    public double getCurrPrice(){
+        return currPrice;
+    }
+    
+    public void setCurrPrice(){
+        this.currPrice = currPrice;
+    }
+    
+    public double getPurPrice(){
+        return purPrice;
+    }
+    
+    public double PurValue(){
+        double PurValue = shares * purPrice;
+        return PurValue;
+    }
+    
+    public double getCurrValue(){
+        double value = shares * currPrice;
+        return value;
+    }
+    
+    public double getGainLoss(){
+        double GainLoss = this.getCurrValue() - PurValue();
+        return GainLoss;
     }
     
 }
