@@ -41,8 +41,12 @@ public class Asset {
         return currPrice;
     }
     
-    public void setCurrPrice(){
+    public void setCurrPrice(double currPrice){
         this.currPrice = currPrice;
+    }
+    
+    public void setPurPrice(double purPrice){
+        this.purPrice = purPrice;
     }
     
     public double getPurPrice(){

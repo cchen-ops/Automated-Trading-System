@@ -13,10 +13,11 @@ import java.math.*;
  * @author Christopher
  */
 public class AutomatedTradingSystem {
-    static String priceDataFile = "C:/Users/Christopher/Documents/NetBeansProjects/Automated Trading System/USDJPY_Candlestick_1_D_BID.csv";
-    static int shortWindow = 50;
-    static int longWindow = 200;
-    static int ShareUnits = 100;
+    static String priceDataFile = "C:/Users/Christopher/Documents/NetBeansProjects/Automated Trading System/EURUSD_Candlestick_1_D_BID.csv";
+    static int shortWindow = 10;
+    static int longWindow = 30;
+    static int longShareUnits = 1;
+    static int shortShareUnits = -1;
     /**
      * @param args the command line arguments
      */
@@ -28,7 +29,10 @@ public class AutomatedTradingSystem {
          
         //Backtest
         
-        Asset Position = new Asset("stock1", 0, 0, 0);
+        Asset Position = new Asset("testAsset", 0, 0, 0); //name, shares, purPrice, curPrice
+        //System.out.println(Position.getCurrPrice());
+        double totPerRet = 0;
+        
         
         for (int i = longWindow; i<priceData.size(); i++){
             //Moving Average Calculation
@@ -39,28 +43,40 @@ public class AutomatedTradingSystem {
             //System.out.println(curlongWindow);
             
             if (curshortWindow >= curlongWindow){
-                if (Position.getShares()<=0){
+                if (Position.getShares()<0){
                     //short to long
-                    int currPosition = Position.getShares();
-                    currPosition = Math.abs(currPosition);
-                    
-                    
-                    
-                    Position.setShares(ShareUnits);
+                    Position.setCurrPrice(priceData.get(i).getClosePrice());
+                    double Ret = Math.log(Position.getPurPrice()) - Math.log(Position.getCurrPrice());
+                    totPerRet += Ret;
+                    Position.setShares(longShareUnits);
+                    Position.setPurPrice(priceData.get(i).getClosePrice());
+                    System.out.println("Gain/Loss " + Ret + " Short to Long @ " + Position.getCurrPrice() + " at time " + i + " num shares " + Position.getShares());
+                }
+                else if (Position.getShares()==0){
+                    Position.setShares(longShareUnits);
+                    Position.setPurPrice(priceData.get(i).getClosePrice());
+                    Position.setCurrPrice(priceData.get(i).getClosePrice());
+                    System.out.println("Long @ " + priceData.get(i).getClosePrice() + " at time " + i + " num shares " + Position.getShares());
                 }
             }
             else {
-                if (Position.getShares()>=0){
-                    
+                if (Position.getShares()>0){
+                    //long to short
+                    Position.setCurrPrice(priceData.get(i).getClosePrice());
+                    double Ret = Math.log(Position.getCurrPrice()) - Math.log(Position.getPurPrice());
+                    totPerRet += Ret;
+                    Position.setShares(shortShareUnits);
+                    Position.setPurPrice(priceData.get(i).getClosePrice());
+                    System.out.println("Gain/Loss " + Ret + " Long to Short @ " + priceData.get(i).getClosePrice() + " at time " + i + " num shares " + Position.getShares());
                 }
-            }
-
+                else if (Position.getShares()==0){
+                    Position.setShares(shortShareUnits);
+                    Position.setPurPrice(priceData.get(i).getClosePrice());
+                    Position.setCurrPrice(priceData.get(i).getClosePrice());
+                    System.out.println("Short @ " + priceData.get(i).getClosePrice()+ " at time " + i + " num shares " + Position.getShares());
+                }
+            }            
         }
-        
-
+        System.out.println(totPerRet);
     }
-         
-    
-    
-
 }

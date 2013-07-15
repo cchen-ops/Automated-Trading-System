@@ -18,12 +18,8 @@ public class Portfolio {
         this.name = name;
     }
     
-        public String getName() {
+    public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
     
     private List<Asset> stocks = new ArrayList<Asset>();
@@ -32,7 +28,7 @@ public class Portfolio {
         return stocks.size();
     }
     
-      // this method gets the market value for each stock, sums it up and returns the total value of the portfolio.
+    // this method gets the market value for each stock, sums it up and returns the total value of the portfolio.
   
     public Double getTotalValue() {
         Double value = 0.0;
