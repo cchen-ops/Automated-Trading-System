@@ -17,6 +17,7 @@ public class AbstainingBayes {
     NaiveBayesUpdateable nb = new NaiveBayesUpdateable();
     nb.buildClassifier(structure);
     Instance current;
+    
     while ((current = loader.getNextInstance(structure)) != null)
         nb.updateClassifier(current);
     
