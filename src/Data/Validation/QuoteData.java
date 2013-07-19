@@ -64,6 +64,7 @@ public class QuoteData {
         this.volume = volume;
     }
     
+    
     public static List<QuoteData> loadData(String nameFile)throws IOException{
         HeaderColumnNameTranslateMappingStrategy<QuoteData> strategy = new HeaderColumnNameTranslateMappingStrategy<QuoteData>();
         strategy.setType(QuoteData.class);
