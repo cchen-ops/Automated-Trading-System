@@ -13,9 +13,9 @@ import java.math.*;
  * @author Christopher
  */
 public class AutomatedTradingSystem {
-    static String priceDataFile = "C:/Users/Christopher/Documents/NetBeansProjects/Automated Trading System/EURUSD_Candlestick_1_D_BID.csv";
+    static String priceDataFile = "C:/Users/Christopher/Documents/NetBeansProjects/Automated Trading System/VIX.US_Candlestick_1_D_BID.csv";
     static int shortWindow = 10;
-    static int longWindow = 30;
+    static int longWindow = 20;
     static int longShareUnits = 1;
     static int shortShareUnits = -1;
     /**
@@ -25,7 +25,7 @@ public class AutomatedTradingSystem {
         
         //Load Data
         List<QuoteData> priceData = QuoteData.loadData(priceDataFile);   
-        //System.out.println(priceData.get(1500).getClosePrice());
+        //System.out.println(priceData.get(1502).getClosePrice());
          
         //Backtest
         
@@ -46,7 +46,7 @@ public class AutomatedTradingSystem {
                 if (Position.getShares()<0){
                     //short to long
                     Position.setCurrPrice(priceData.get(i).getClosePrice());
-                    double Ret = Math.log(Position.getPurPrice()) - Math.log(Position.getCurrPrice());
+                    double Ret = (Math.log(Position.getCurrPrice()) - Math.log(Position.getPurPrice()))*shortShareUnits;
                     totPerRet += Ret;
                     Position.setShares(longShareUnits);
                     Position.setPurPrice(priceData.get(i).getClosePrice());
@@ -63,7 +63,7 @@ public class AutomatedTradingSystem {
                 if (Position.getShares()>0){
                     //long to short
                     Position.setCurrPrice(priceData.get(i).getClosePrice());
-                    double Ret = Math.log(Position.getCurrPrice()) - Math.log(Position.getPurPrice());
+                    double Ret = (Math.log(Position.getCurrPrice()) - Math.log(Position.getPurPrice()))*longShareUnits;
                     totPerRet += Ret;
                     Position.setShares(shortShareUnits);
                     Position.setPurPrice(priceData.get(i).getClosePrice());

@@ -13,7 +13,7 @@ import java.util.*;
  */
 public class QuoteData {
     double closePrice, openPrice, high, low;
-    double volume;
+    double volume, range;
     String date;
 
     public String getDate() {
@@ -64,7 +64,7 @@ public class QuoteData {
         this.volume = volume;
     }
     
-    
+
     public static List<QuoteData> loadData(String nameFile)throws IOException{
         HeaderColumnNameTranslateMappingStrategy<QuoteData> strategy = new HeaderColumnNameTranslateMappingStrategy<QuoteData>();
         strategy.setType(QuoteData.class);
