@@ -18,26 +18,18 @@ import moa.classifiers.bayes.*;
 public class AbstainingNaiveBayes {
     
     
-    public static void main(String[] args){
-        ArffFileStream WineD = new ArffFileStream("C:/Users/Christopher/Downloads/wine1train.arff", 14);
-        NaiveBayes nb = new NaiveBayes();
-        nb.resetLearningImpl();
-        WineD.prepareForUse();
+    public static List<Integer> abstainNB(String filename, int index, double threshold){
+        NaiveBayes OBA = new NaiveBayes();
+        OBA.resetLearningImpl();
+        List<Integer> predictionsList = new ArrayList();
         
-        Instance current;
-        while (WineD.hasMoreInstances() == true){
-            current = WineD.nextInstance();
-            //System.out.println(current);
-            nb.trainOnInstance(current);  
-        }
-        
-        ArffFileStream WineT = new ArffFileStream("C:/Users/Christopher/Downloads/wine1testa.arff", 14);
+        ArffFileStream WineT = new ArffFileStream(filename, index);
         Instance currentTest;
         while (WineT.hasMoreInstances() == true){
             currentTest = WineT.nextInstance();
             //System.out.println(current);
-            double[] prob = nb.getVotesForInstance(currentTest);
-            nb.trainOnInstance(currentTest);
+            double[] prob = OBA.getVotesForInstance(currentTest);
+            OBA.trainOnInstance(currentTest);
             //System.out.println(prob[0]+" "+ prob[1]+" "+ prob[2]);
             
             int maxIndex = -1;
@@ -54,12 +46,28 @@ public class AbstainingNaiveBayes {
             for (double i: prob){
                 sum += i;
             }
-            if(maxValue/sum <0.98){
-                System.out.print("No Prediction ");
-                System.out.println(prob[0]+" "+ prob[1]+" "+ prob[2]);
-            }
-            else{System.out.println(maxIndex+1);}           
-        }
+            try{
+                if(maxValue/sum <threshold){                
+                //System.out.print(prob[0]+" "+ prob[1]);
+                //System.out.println("No Prediction ");
+                predictionsList.add(0);
+                }
+                else{
+                    //System.out.println(maxIndex+1);
+                    predictionsList.add(maxIndex+1);
+                }
+                
+            } //end Try
+            
+            catch (Exception e){
+                 //System.out.println("No Prediction - Error");
+                 predictionsList.add(0);
+            }  //end Catch         
+        } //end While
         
-    }
-}
+        //System.out.println("List test: "+predictionsList.get(8));
+        
+        return predictionsList;
+        
+    } //end abNBPred method
+} // end Class

@@ -1,4 +1,4 @@
-package automated.trading.system;
+package Indicators;
 
 import com.tictactec.ta.lib.Core;
 import com.tictactec.ta.lib.MInteger;

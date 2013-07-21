@@ -13,9 +13,41 @@ import java.util.*;
  */
 public class QuoteData {
     double closePrice, openPrice, high, low;
-    double volume, range;
+    double volume, SP500, forIndex, range, change;
     String date;
 
+    public void setSP500(double SP500){
+        this.SP500 = SP500;
+    }
+    
+    public double getSP500(){
+        return this.SP500;
+    }
+    
+    public void setforIndex(double forIndex){
+        this.forIndex = forIndex;
+    }
+    
+    public double getforIndex(){
+        return this.forIndex;
+    }
+    
+    public void setRange(double Range){
+        this.range = Range;
+    }
+    
+    public double getRange(){
+        return this.range;
+    }
+    
+    public void setChange(double Change){
+        this.change = Change;
+    }
+    
+    public double getChange(){
+        return this.change;
+    }
+    
     public String getDate() {
         return date;
     }
@@ -76,6 +108,10 @@ public class QuoteData {
         mapping.put("Low", "low");
         mapping.put("Open", "openPrice");
         mapping.put("Volume", "volume");
+        mapping.put("SP500", "SP500");
+        mapping.put("Range", "range");
+        mapping.put("Change", "change");
+        mapping.put("ForIndex", "ForIndex");
 
         strategy.setColumnMapping(mapping);
 
