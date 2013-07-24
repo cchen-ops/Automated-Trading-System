@@ -1,0 +1,14 @@
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+92.0,0.203125,-2.627429138455126E-13,92.0,44.565217391304344,-12.788461538461535,2187.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+200.0,0.015625,-2.021099337273174E-14,200.0,52.5,3.416022773485164,200.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+400.0,0.03125,-4.042198674546348E-14,400.0,48.0,-2.9193468579911017,400.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+600.0,0.03125,-4.042198674546348E-14,600.0,49.5,-1.0000000000000009,600.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+800.0,0.046875,-6.063298011819522E-14,800.0,46.0,-12.488282470575983,800.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1000.0,0.0625,-8.084397349092696E-14,1000.0,51.5,3.0000000000000027,1000.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1200.0,0.078125,-1.010549668636587E-13,1200.0,51.5,2.7081243731193494,1200.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1400.0,0.09375,-1.2126596023639043E-13,1400.0,49.0,0.0,1400.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1600.0,0.09375,-1.2126596023639043E-13,1600.0,50.0,0.0,1600.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1800.0,0.109375,-1.4147695360912217E-13,1800.0,47.0,-0.5788025429357724,1800.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+2000.0,0.109375,-1.4147695360912217E-13,2000.0,53.5,4.595814526056644,2000.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+2187.0,0.125,-1.6168794698185392E-13,2187.0,49.5,-3.69609856262834,2187.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0

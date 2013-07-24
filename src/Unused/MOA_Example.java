@@ -16,6 +16,8 @@ import moa.classifiers.functions.*;
 import moa.classifiers.trees.*;
 import moa.clusterers.streamkm.*;
 import moa.classifiers.bayes.*;
+import moa.classifiers.meta.LeveragingBag;
+import moa.classifiers.trees.*;
 /**
  *
  * @author Christopher
@@ -24,26 +26,28 @@ public class MOA_Example {
     
     
     public static void main(String[] args){
-        NaiveBayes OBA = new NaiveBayes();
-        OBA.resetLearningImpl();
+        HoeffdingAdaptiveTree Class1 = new HoeffdingAdaptiveTree();
+        Class1.prepareForUse();
+        ArffFileStream WineT = new ArffFileStream("C:/Users/Christopher/Downloads/GBPUSD_Candlestick_1_D_BID_Final.arff", 10);
+        //Class1.setModelContext(null);
+        Class1.resetLearningImpl();
         List<Integer> predictionsList = new ArrayList();
 //        ArffFileStream WineD = new ArffFileStream("C:/Users/Christopher/Downloads/wine1train.arff", 14);
-//        WineD.prepareForUse();
+//        
 //        
 //        Instance current;
 //        while (WineD.hasMoreInstances() == true){
 //            current = WineD.nextInstance();
 //            //System.out.println(current);
-//            OBA.trainOnInstance(current);  
+//            Class1.trainOnInstance(current);  
 //        }
         
-        ArffFileStream WineT = new ArffFileStream("C:/Users/Christopher/Downloads/GBPUSD_Candlestick_1_D_BID_Final.arff", 10);
         Instance currentTest;
         while (WineT.hasMoreInstances() == true){
             currentTest = WineT.nextInstance();
             //System.out.println(current);
-            double[] prob = OBA.getVotesForInstance(currentTest);
-            OBA.trainOnInstance(currentTest);
+            double[] prob = Class1.getVotesForInstance(currentTest);
+            Class1.trainOnInstance(currentTest);
             //System.out.println(prob[0]+" "+ prob[1]+" "+ prob[2]);
             
             int maxIndex = -1;
@@ -78,6 +82,8 @@ public class MOA_Example {
                  predictionsList.add(0);
             }  //end Catch         
         } //end While
+        
+
         
         //System.out.println("List test: "+predictionsList.get(8));
         

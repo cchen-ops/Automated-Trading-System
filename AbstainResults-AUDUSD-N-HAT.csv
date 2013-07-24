@@ -1,0 +1,47 @@
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+200.0,0.078125,-1.010549668636587E-13,200.0,51.0,2.1565495207667795,203.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+400.0,0.09375,-1.2126596023639043E-13,400.0,52.5,5.000000000000004,403.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+600.0,0.109375,-1.4147695360912217E-13,600.0,47.5,-6.881107491856689,603.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+800.0,0.125,-1.6168794698185392E-13,800.0,59.5,0.0,803.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1000.0,0.140625,-1.8189894035458566E-13,1000.0,47.5,0.0,1003.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1200.0,0.15625,-2.021099337273174E-13,1200.0,55.00000000000001,0.0,1203.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1400.0,0.171875,-2.2232092710004914E-13,1400.0,55.50000000000001,0.0,1403.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1600.0,0.171875,-2.2232092710004914E-13,1600.0,55.50000000000001,0.0,1603.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1800.0,0.1875,-2.4253192047278086E-13,1800.0,53.0,0.0,1803.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+2000.0,0.203125,-2.627429138455126E-13,2000.0,48.5,0.0,2003.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+2017.0,0.203125,-2.627429138455126E-13,2017.0,50.0,0.0,2020.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+200.0,0.078125,-1.010549668636587E-13,200.0,51.0,2.1565495207667795,203.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+400.0,0.09375,-1.2126596023639043E-13,400.0,52.5,5.000000000000004,403.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+600.0,0.109375,-1.4147695360912217E-13,600.0,47.5,-6.881107491856689,603.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+800.0,0.125,-1.6168794698185392E-13,800.0,59.5,0.0,803.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1000.0,0.140625,-1.8189894035458566E-13,1000.0,47.5,0.0,1003.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1200.0,0.15625,-2.021099337273174E-13,1200.0,55.00000000000001,0.0,1203.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1400.0,0.171875,-2.2232092710004914E-13,1400.0,55.50000000000001,0.0,1403.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1600.0,0.171875,-2.2232092710004914E-13,1600.0,55.50000000000001,0.0,1603.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+1800.0,0.1875,-2.4253192047278086E-13,1800.0,53.0,0.0,1803.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+2000.0,0.203125,-2.627429138455126E-13,2000.0,48.5,0.0,2003.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+2017.0,0.203125,-2.627429138455126E-13,2017.0,50.0,0.0,2020.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+200.0,0.078125,-1.010549668636587E-13,200.0,51.0,2.1858468909072792,218.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+400.0,0.109375,-1.4147695360912217E-13,400.0,46.5,-5.6685759431167195,454.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+450.0,0.21875,-2.8295390721824435E-13,450.0,43.5,-11.13296616837137,2020.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+200.0,0.09375,-1.2126596023639043E-13,200.0,50.0,0.2692729629998928,233.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+393.0,0.21875,-2.8295390721824435E-13,393.0,46.5,-0.6585136406396785,2020.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+200.0,0.109375,-1.4147695360912217E-13,200.0,51.0,0.45708481462670886,273.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+322.0,0.21875,-2.8295390721824435E-13,322.0,47.0,-4.867431737237833,2020.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+200.0,0.09375,-1.2126596023639043E-13,200.0,52.5,4.4842147597023905,350.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+239.0,0.203125,-2.627429138455126E-13,239.0,49.0,-4.3371522094926345,2020.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+190.0,0.21875,-2.8295390721824435E-13,190.0,51.05263157894737,1.6475564956028084,2020.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+164.0,0.203125,-2.627429138455126E-13,164.0,51.829268292682926,2.7035145689396285,2020.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+141.0,0.203125,-2.627429138455126E-13,141.0,51.06382978723404,1.458523245214238,2020.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+118.0,0.1875,-2.4253192047278086E-13,118.0,53.38983050847458,4.698972099853161,2020.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+learning evaluation instances,evaluation time (cpu seconds),model cost (RAM-Hours),classified instances,classifications correct (percent),Kappa Statistic (percent),model training instances,model serialized size (bytes),tree size (nodes),tree size (leaves),active learning leaves,tree depth,active leaf byte size estimate,inactive leaf byte size estimate,byte size estimate overhead
+82.0,0.203125,-2.627429138455126E-13,82.0,50.0,0.0,2020.0,-5.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
